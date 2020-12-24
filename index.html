@@ -518,10 +518,12 @@
 		p{
 			font-size: 1.6rem;
 		}
-		button{
+		button#upor{
 			position: fixed;
 			bottom: 2%;
 			right: 2%;
+			opacity: 0;
+			visibility: hidden;
 			padding: 10px 25px;
 			font-size: 1.6rem;
 			color: #fff;
@@ -534,9 +536,10 @@
 			border-radius: 2rem;
 			box-shadow: 0 0 1rem 0 rgba(0,0,0,0.4);
 			transition: all .5s ease; 
+			z-index: 999999;
 		}
-		button:hover,
-		button:focus{
+		button#upor:hover,
+		button#upor:focus{
 			border: none;
 			outline: none;
 			box-shadow:  0 0 1rem 0 rgba(0,0,0,.4);
@@ -600,7 +603,7 @@
 		<h1>Scroll To Bottom</h1>
 		<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Facilis dolor magnam reprehenderit, eligendi debitis voluptate veniam, voluptatum natus adipisci tempora aspernatur nesciunt aliquam voluptas nobis beatae quasi, doloremque! Deleniti earum architecto tenetur magni amet, optio natus maiores odit reiciendis. Blanditiis minima ducimus officiis itaque culpa voluptas possimus laboriosam ratione in quam reprehenderit nihil nulla, minus quia eius facilis enim hic ipsa facere, totam dolorem veritatis commodi recusandae! Quibusdam consequuntur unde perspiciatis magni dolorum perferendis architecto dolores. Illo debitis quia tempora natus quibusdam repellendus nihil, dolore ea libero quo, consequuntur aliquid, blanditiis maxime consequatur, quasi impedit tenetur sunt aspernatur hic nostrum.</p>
 	</div>
-	<button>Upor Jao</button>
+	<button id="upor">Upor Jao</button>
 
 
 
@@ -612,8 +615,9 @@
 
 <!-- Call The fucntion -->
 <script>
-	const button = document.querySelector("button");
-	UPOR(button,500);
+	const button = document.querySelector("#upor");
+	// UPOR(Element, Speed, Offset)
+	UPOR(button,500,100);
 </script>
 
 </body>

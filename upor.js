@@ -1,6 +1,6 @@
 'use strict';
 
-const UPOR = (el,duration) => {
+const UPOR = (el,duration,offset) => {
 
 	 let scrollToTop = function() {
 
@@ -18,7 +18,7 @@ const UPOR = (el,duration) => {
 	el.addEventListener("click", scrollToTop.bind(duration));
 
 	window.addEventListener('scroll', () => {
-		if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+		if(document.body.scrollTop > offset || document.documentElement.scrollTop > offset){
 			const STYLE = {
 				opacity : '1',
 				transform : 'translateY(0)',
